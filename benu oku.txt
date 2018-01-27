@@ -1,0 +1,3 @@
+soru_cevap adýnda bir veritabaný olusturun  ve soru_cevap.sql uzantýlý dosyayý veritabanýnda içe aktar diyin 
+
+dosyalarý www klasorune atýn iþlem tamamdýr..

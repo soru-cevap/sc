@@ -1,0 +1,19 @@
+RewriteEngine on 
+
+Rewriterule ^([0-9a-zA-Z-_/]+).html$   ?do=devam&link=$1
+Rewriterule ^sayfa/([0-9]+)$   ?s=$1
+Rewriterule ^etiket/([^/]*)$   ?do=etiket&link=$1
+Rewriterule ^profil/([^/]*)$   ?do=profil&link=$1
+Rewriterule ^mesa_gonder/([^/]*)$   ?do=mesaj_gonder&uye=$1
+Rewriterule ^etiket/([^/]*)/sayfa/([0-9]+)(/?)$   ?do=etiket&link=$1&s=$2
+Rewriterule ^arama/([^/]*)$   ?do=arama&kelime=$1
+Rewriterule ^arama/([^/]*)/sayfa/([0-9]+)$   ?do=arama&kelime=$1&s=$2
+Rewriterule ^mesaj_gonder/([^/]*)$   ?do=mesaj_gonder&uye=$1
+Rewriterule ^mesaj_sil/([0-9]+)$   ?do=mesaj_sil&id=$1
+Rewriterule ^mesaj_oku/([0-9]+)$   ?do=mesaj_oku&id=$1
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+Rewriterule ^([0-9a-zA-Z-_/]+)(/?)$   ?do=$1
